@@ -87,7 +87,7 @@ a {
 }
 
 .main-title::before {
-  animation: to-right 0.7s linear forwards infinite;
+  animation: to-right 0.7s linear alternate infinite;
 }
 @keyframes to-right {
   0% {
