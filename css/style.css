@@ -99,7 +99,7 @@ a {
 }
 
 .main-title::after {
-  animation: to-left 0.7s linear forwards infinite;
+  animation: to-left 0.7s linear alternate infinite;
 }
 @keyframes to-left {
   0% {
