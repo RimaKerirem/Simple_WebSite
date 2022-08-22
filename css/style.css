@@ -391,7 +391,7 @@ header nav .icons .search-box .form button i {
   padding: 60px;
   color: white;
   background-color: var(--rgb-color);
-  animation: left-to-right 2s infinite;
+  animation: left-to-right 2s infinite linear;
 }
 @keyframes left-to-right {
   0%,
@@ -445,10 +445,10 @@ header nav .icons .search-box .form button i {
 }
 
 .about .about-container .image {
-  width: 350px;
-  height: 184px;
+  width: 320px;
+  height: 180px;
   position: relative;
-  z-index: 100;
+  z-index: 1;
 }
 
 .about .about-container .image img {
@@ -460,20 +460,20 @@ header nav .icons .search-box .form button i {
 .about .about-container .image::after {
   content: "";
   position: absolute;
-  width: calc(100% + 60px);
+  width: calc(100% + 40px);
   height: 80px;
   z-index: -1;
   background-color: var(--main-color);
 }
 
 .about .about-container .image::before {
-  top: -30px;
-  left: -30px;
+  top: -20px;
+  left: -20px;
 }
 
 .about .about-container .image::after {
-  right: -30px;
-  bottom: -30px;
+  right: -20px;
+  bottom: -20px;
 }
 
 .about .about-container span {
