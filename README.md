@@ -1,6 +1,6 @@
 # Simple_WebSite
 
-### Laguages : HTML, CSS and Javascript
+### Languages : HTML, CSS and Javascript
 
 ### Frameworks : Font Awesome 6, Google Fonts
 
