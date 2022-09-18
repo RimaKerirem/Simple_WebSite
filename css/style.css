@@ -132,7 +132,7 @@ a {
   }
 }
 
-.up i {
+.up svg {
   color: white;
   font-size: 22px;
   font-weight: bold;
@@ -232,16 +232,16 @@ header nav .icons .search-box {
   position: relative;
 }
 
-header nav .icons .sign-box i,
-header nav .icons .search-box i {
+header nav .icons .sign-box svg,
+header nav .icons .search-box svg {
   color: white;
   font-size: 20px;
   transition: var(--main-transition);
   cursor: pointer;
 }
 
-header nav .icons .sign-box i:hover,
-header nav .icons .search-box i:hover {
+header nav .icons .sign-box svg:hover,
+header nav .icons .search-box svg:hover {
   color: var(--main-color);
 }
 
@@ -320,7 +320,7 @@ header nav .icons .search-box .form button {
   cursor: pointer;
 }
 
-header nav .icons .search-box .form button i {
+header nav .icons .search-box .form button svg {
   text-align: center;
   font-size: 14px;
   color: white;
@@ -354,8 +354,8 @@ header nav .icons .search-box .form button i {
     top: 100%;
   }
 
-  header nav .icons .sign-box i,
-  header nav .icons .search-box i {
+  header nav .icons .sign-box svg,
+  header nav .icons .search-box svg {
     font-size: 16px;
   }
 
@@ -620,7 +620,7 @@ header nav .icons .search-box .form button i {
   gap: 60px;
 }
 
-.contact .contact-container .social a i {
+.contact .contact-container .social a svg {
   font-size: 40px;
 }
 
@@ -642,7 +642,7 @@ header nav .icons .search-box .form button i {
   gap: 40px;
 }
 
-.contact .contact-container .contact-box i {
+.contact .contact-container .contact-box svg {
   font-size: 25px;
 }
 

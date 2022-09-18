@@ -1,9 +1,9 @@
 # Simple_WebSite
 
-### Built with
+### Built with :
 
-  #### Languages : HTML, CSS and Javascript
+####	- Languages : HTML, CSS and Javascript
 
-  #### Frameworks : Font Awesome 6, Google Fonts
+####	- Frameworks : Font Awesome 6, Google Fonts
 
-### Visit site : https://rimakerirem.github.io/Simple_WebSite/
+### Demo : https://rimakerirem.github.io/Simple_WebSite/

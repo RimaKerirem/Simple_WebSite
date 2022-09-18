@@ -3,10 +3,10 @@ let mainNav = document.querySelector("header nav .main-nav");
 let lis = document.querySelectorAll("header nav .main-nav li a");
 
 let signBox = document.querySelector("header nav .icons .sign-box ul");
-let iconSign = document.querySelector("header nav .icons .sign-box i");
+let iconSign = document.querySelector("header nav .icons .sign-box");
 
 let searchBox = document.querySelector("header nav .icons .search-box .form");
-let iconSearch = document.querySelector("header nav .icons .search-box i");
+let iconSearch = document.querySelector("header nav .icons .search-box");
 
 let up = document.querySelector(".up");
 
