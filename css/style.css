@@ -1,7 +1,7 @@
 /* Start global elements*/
 :root {
-  --main-color: #a74c8c;
-  --secondery-color: #766f7f;
+  --color-one: #a74c8c;
+  --color-two: #766f7f;
   --rgb-color: rgb(84 21 66 / 60%);
   --main-transition: 0.6s;
   --main-background-section: #f6f6f6;
@@ -60,16 +60,14 @@ a {
 }
 
 .main-title {
-  color: var(--secondery-color);
-  font-size: 33px;
+  color: var(--color-two);
   display: block;
   padding: 10px 20px;
   width: fit-content;
   margin: 0 auto 100px;
   border-radius: 6px;
   position: relative;
-  border: 2px solid var(--secondery-color);
-  background-color: white;
+  border: 2px solid var(--color-two);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -78,9 +76,9 @@ a {
 .main-title::after {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: var(--secondery-color);
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-two);
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
@@ -91,10 +89,10 @@ a {
 }
 @keyframes to-right {
   0% {
-    left: -30px;
+    left: -25px;
   }
   100% {
-    left: -20px;
+    left: -16px;
   }
 }
 
@@ -103,17 +101,17 @@ a {
 }
 @keyframes to-left {
   0% {
-    right: -30px;
+    right: -25px;
   }
   100% {
-    right: -20px;
+    right: -16px;
   }
 }
 
 .up {
   width: 50px;
   height: 50px;
-  background-color: var(--secondery-color);
+  background-color: var(--color-two);
   border-radius: 50%;
   display: none;
   position: fixed;
@@ -171,7 +169,7 @@ header .container::after {
 }
 
 header .logo {
-  color: var(--main-color);
+  color: var(--color-one);
   font-size: 30px;
   font-weight: 900;
   letter-spacing: -2px;
@@ -204,8 +202,8 @@ header nav .main-nav li a {
 
 header nav .main-nav li a.active,
 header nav .main-nav li a:hover {
-  border-bottom: 2px solid var(--main-color);
-  color: var(--main-color);
+  border-bottom: 2px solid var(--color-one);
+  color: var(--color-one);
 }
 
 header nav .icons {
@@ -224,7 +222,7 @@ header nav .icons::before {
   width: 2px;
   height: 50%;
   left: 0;
-  background-color: var(--main-color);
+  background-color: var(--color-one);
 }
 
 header nav .icons .sign-box,
@@ -242,7 +240,7 @@ header nav .icons .search-box svg {
 
 header nav .icons .sign-box svg:hover,
 header nav .icons .search-box svg:hover {
-  color: var(--main-color);
+  color: var(--color-one);
 }
 
 header nav .icons .sign-box ul {
@@ -263,8 +261,7 @@ header nav .icons .sign-box ul::before {
   right: 0;
 }
 
-header nav .icons .sign-box ul li a {
-  display: block;
+header nav .icons .sign-box ul li {
   padding: 15px 30px;
   color: white;
   font-size: 18px;
@@ -272,7 +269,7 @@ header nav .icons .sign-box ul li a {
   cursor: pointer;
 }
 
-header nav .icons .sign-box ul li a:hover {
+header nav .icons .sign-box ul li:hover {
   padding-left: 40px;
 }
 
@@ -301,10 +298,10 @@ header nav .icons .search-box .form::before {
 
 header nav .icons .search-box .form input {
   padding: 12px;
-  border: 1px solid var(--main-color);
+  border: 1px solid var(--color-one);
   border-radius: 6px;
   width: 80%;
-  caret-color: var(--main-color);
+  caret-color: var(--color-one);
 }
 
 header nav .icons .search-box .form input:focus {
@@ -312,7 +309,7 @@ header nav .icons .search-box .form input:focus {
 }
 
 header nav .icons .search-box .form button {
-  background-color: var(--main-color);
+  background-color: var(--color-one);
   padding: 12px 0;
   border: none;
   border-radius: 4px;
@@ -333,7 +330,7 @@ header nav .icons .search-box .form button svg {
   }
 
   header nav .menu:hover {
-    color: var(--main-color);
+    color: var(--color-one);
   }
 
   header nav .main-nav {
@@ -363,6 +360,178 @@ header nav .icons .search-box .form button svg {
     width: 320px;
   }
 }
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 150%;
+  background-color: rgb(0 0 0 / 0.4);
+  z-index: 100;
+  transition: var(--main-transition);
+}
+
+.sign-in-content,
+.sign-up-content {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  height: auto;
+}
+
+.sign-in-content {
+  width: 30%;
+}
+
+.sign-up-content {
+  width: 35%;
+}
+
+.sign-in-content .close,
+.sign-up-content .close {
+  float: right;
+  cursor: pointer;
+  color: var(--color-two);
+}
+
+.sign-in-content h2,
+.sign-up-content h2 {
+  font-size: 25px;
+  color: var(--color-two);
+  text-align: center;
+  margin: 10px 0 25px;
+}
+
+.sign-in-content form,
+.sign-up-content form {
+  width: 100%;
+  position: relative;
+}
+
+.sign-in-content form label,
+.sign-up-content form label {
+  font-size: 17px;
+  color: #1f1d1d;
+  line-height: 1.6;
+}
+
+.sign-in-content form input,
+.sign-up-content form input,
+.sign-up-content form .date .month-box select {
+  width: 100%;
+  margin: 0 0 10px;
+  padding: 10px;
+  border: 2px solid var(--color-two);
+  font-size: 17px;
+  caret-color: var(--color-two);
+}
+
+.sign-in-content form .envelope,
+.sign-in-content form .eye {
+  position: absolute;
+  right: 10px;
+  color: var(--color-two);
+}
+
+.sign-in-content form .envelope {
+  top: 42px;
+}
+
+.sign-in-content form .eye {
+  top: 123px;
+  cursor: pointer;
+  display: block;
+}
+
+.sign-in-content form input[type="submit"],
+.sign-up-content form input[type="submit"] {
+  display: block;
+  background: var(--color-two);
+  color: white;
+  font-size: 17px;
+  width: 60%;
+  padding: 10px 0;
+  margin: 20px auto 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sign-in-content form input:focus,
+.sign-up-content form input:focus,
+.sign-up-content form select:focus {
+  outline: none;
+}
+
+.sign-up-content form .date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign-up-content form .date .day-box,
+.sign-up-content form .date .month-box,
+.sign-up-content form .date .year-box {
+  flex-basis: calc(95% / 3);
+}
+
+.sign-up-content form .date .month-box select {
+  padding: 9px 10px 10px;
+}
+
+.sign-up-content form .date .month-box select option {
+  color: var(--color-two);
+}
+
+.sign-up-content form .birth {
+  color: var(--color-two);
+}
+
+@media (max-width: 991px) {
+  .sign-in-content {
+    width: 40%;
+  }
+
+  .sign-up-content {
+    width: 45%;
+  }
+}
+
+@media (max-width: 767px) {
+  .sign-in-content,
+  .sign-up-content {
+    width: 70%;
+    padding: 20px;
+  }
+
+  .sign-in-content form label,
+  .sign-in-content form input,
+  .sign-in-content form .envelope,
+  .sign-in-content form .eye,
+  .sign-up-content form label,
+  .sign-up-content form input,
+  .sign-up-content form .birth {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .sign-in-content form .envelope {
+    top: 27px;
+  }
+  .sign-in-content form .eye {
+    top: 92px;
+  }
+
+  .sign-up-content form .date .month-box select {
+    font-size: 14px;
+    padding: 5px 6px;
+  }
+}
+
 /* End header */
 
 /* Start landing */
@@ -463,7 +632,7 @@ header nav .icons .search-box .form button svg {
   width: calc(100% + 40px);
   height: 80px;
   z-index: -1;
-  background-color: var(--main-color);
+  background-color: var(--color-one);
 }
 
 .about .about-container .image::before {
@@ -480,7 +649,7 @@ header nav .icons .search-box .form button svg {
   position: relative;
   width: 4px;
   height: 150px;
-  background-color: var(--main-color);
+  background-color: var(--color-one);
   display: block;
   margin: 50px auto;
   animation: span-color 3s linear infinite forwards;
@@ -493,7 +662,7 @@ header nav .icons .search-box .form button svg {
   width: 16px;
   height: 16px;
   background-color: white;
-  background-color: var(--main-color);
+  background-color: var(--color-one);
   border-radius: 50%;
   left: 50%;
   transform: translateX(-50%);
@@ -569,13 +738,12 @@ header nav .icons .search-box .form button svg {
 }
 
 .services .box .srv {
-  border-bottom: 1px solid var(--secondery-color);
+  border-bottom: 1px solid var(--color-two);
   padding: 35px;
 }
 
-.services .box .srv h2 {
+.services .box .srv h3 {
   margin-bottom: 25px;
-  font-weight: 900;
 }
 
 .services .box .srv p {
@@ -590,12 +758,11 @@ header nav .icons .search-box .form button svg {
 
 .services .box .more a {
   font-weight: bold;
-  color: var(--secondery-color);
-  font-size: 18px;
+  color: var(--color-two);
 }
 
 .services .box .more a:hover {
-  color: var(--main-color);
+  color: var(--color-one);
 }
 /* End services */
 
@@ -674,7 +841,7 @@ header nav .icons .search-box .form button svg {
 
 /* Start Footer */
 footer {
-  background-color: var(--main-color);
+  background-color: var(--color-one);
   padding: 20px;
   text-align: center;
 }

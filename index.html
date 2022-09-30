@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>WebSite</title>
+    <title>Simple Website</title>
 
     <!-- Font Awesome library -->
     <link rel="stylesheet" href="css/all.min.css" />
@@ -41,8 +41,8 @@
             <div class="sign-box">
               <i class="fa-solid fa-user"></i>
               <ul style="display: none">
-                <li><a href="">Sign In</a></li>
-                <li><a href="">Sign Up</a></li>
+                <li id="sign-in">Sign In</li>
+                <li id="sign-up">Sign Up</li>
               </ul>
             </div>
             <div class="search-box">
@@ -59,6 +59,87 @@
       </div>
     </header>
     <!-- End Header -->
+
+    <!-- Sign in modal -->
+    <div class="modal" id="sign-in-modal">
+      <div class="sign-in-content">
+        <div class="close" id="close-in">
+          <i class="fa-solid fa-x"></i>
+        </div>
+        <h2 class="title">Sign In</h2>
+        <form action="">
+          <label for="mail">E-mail Address</label>
+          <input type="email" id="mail" required />
+          <i class="fa-solid fa-envelope envelope"></i>
+
+          <label for="pass">Password</label>
+          <input type="password" id="pass" required />
+          <div id="show-password">
+            <i class="fa-solid fa-eye-slash eye"></i>
+            <i class="fa-solid fa-eye eye" style="display: none"></i>
+          </div>
+          <input type="submit" value="Sign In" />
+        </form>
+      </div>
+    </div>
+
+    <!-- Sign up modal -->
+    <div class="modal" id="sign-up-modal">
+      <div class="sign-up-content">
+        <div class="close" id="close-up">
+          <i class="fa-solid fa-x"></i>
+        </div>
+
+        <h2 class="title">Sign Up</h2>
+        <form action="">
+          <label for="first">First Name</label>
+          <input type="text" id="first" required />
+
+          <label for="last">Last Name</label>
+          <input type="text" id="last" required />
+
+          <label for="email">E-mail Address</label>
+          <input type="email" id="email" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" required />
+
+          <h3 class="birth">Date of Birth</h3>
+          <div class="date">
+            <div class="day-box">
+              <label for="day">Day</label>
+              <input type="text" id="day" />
+            </div>
+
+            <div class="month-box">
+              <label for="month">Month</label>
+              <select id="month">
+                <option value=""></option>
+                <option value="val1">Jan</option>
+                <option value="val2">Feby</option>
+                <option value="val3">Mar</option>
+                <option value="val4">Apr</option>
+                <option value="val5">may</option>
+                <option value="val6">Jun</option>
+                <option value="val7">Jul</option>
+                <option value="val8">Aug</option>
+                <option value="val9">Sep</option>
+                <option value="val10">Oct</option>
+                <option value="val11">Nov</option>
+                <option value="val12">Dec</option>
+              </select>
+            </div>
+
+            <div class="year-box">
+              <label for="year">Year</label>
+              <input type="text" id="year" />
+            </div>
+          </div>
+
+          <input type="submit" value="Sign Up" />
+        </form>
+      </div>
+    </div>
 
     <!-- Scroll to top -->
     <span class="up"><i class="fa-solid fa-angles-up"></i></span>
@@ -103,7 +184,7 @@
       <div class="container">
         <div class="box">
           <div class="srv">
-            <h2 class="srv-name">Service One</h2>
+            <h3 class="srv-name">Service One</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
               libero obcaecati quod reiciendis inventore quam perferendis aut
@@ -117,7 +198,7 @@
         </div>
         <div class="box">
           <div class="srv">
-            <h2 class="srv-name">Service Two</h2>
+            <h3 class="srv-name">Service Two</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
               reprehenderit ipsam, ex numquam deleniti vero blanditiis itaque
@@ -131,7 +212,7 @@
         </div>
         <div class="box">
           <div class="srv">
-            <h2 class="srv-name">Service Three</h2>
+            <h3 class="srv-name">Service Three</h3>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
               laborum consectetur, adipisci ut sunt sit omnis commodi voluptas
@@ -145,7 +226,7 @@
         </div>
         <div class="box">
           <div class="srv">
-            <h2 class="srv-name">Service Four</h2>
+            <h3 class="srv-name">Service Four</h3>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Adipisci, quam hic quaerat repellendus doloribus officiis laborum
@@ -163,7 +244,7 @@
 
     <!-- Start Contact section -->
     <section class="contact" id="contact">
-      <h2 class="main-title">Contact Us</h2>
+      <h2 class="main-title">Contact</h2>
       <div class="contact-container">
         <div class="social">
           <a href="#"><i class="fa-brands fa-facebook"></i></a>

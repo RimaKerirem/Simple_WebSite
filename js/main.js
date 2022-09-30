@@ -8,6 +8,18 @@ let iconSign = document.querySelector("header nav .icons .sign-box");
 let searchBox = document.querySelector("header nav .icons .search-box .form");
 let iconSearch = document.querySelector("header nav .icons .search-box");
 
+let pass = document.getElementById("pass");
+let showPassword = document.getElementById("show-password");
+
+let signInModal = document.getElementById("sign-in-modal");
+let signInBtn = document.getElementById("sign-in");
+
+let signUpModal = document.getElementById("sign-up-modal");
+let signUpBtn = document.getElementById("sign-up");
+
+let closeIn = document.getElementById("close-in");
+let closeUp = document.getElementById("close-up");
+
 let up = document.querySelector(".up");
 
 menu.addEventListener("click", () => mainNav.classList.toggle("show"));
@@ -21,19 +33,11 @@ iconSign.addEventListener("click", () => dispalyBlock(signBox));
 iconSearch.addEventListener("click", () => dispalyBlock(searchBox));
 
 function dispalyBlock(elt) {
-  if (elt.style.display === "none") {
-    elt.style.display = "block";
-  } else {
-    elt.style.display = "none";
-  }
+  elt.style.display = elt.style.display === "none" ? "block" : "none";
 }
 
-window.onscroll = function () {
-  if (this.scrollY >= 700) {
-    up.style.display = "block";
-  } else {
-    up.style.display = "none";
-  }
+window.onscroll = () => {
+  up.style.display = this.scrollY >= 700 ? "block" : "none";
 };
 
 up.onclick = function () {
@@ -42,3 +46,30 @@ up.onclick = function () {
     behavor: "smooth",
   });
 };
+
+signInBtn.onclick = () => (signInModal.style.top = "0");
+signUpBtn.onclick = () => (signUpModal.style.top = "0");
+
+closeIn.onclick = () => (signInModal.style.top = "-100%");
+closeUp.onclick = () => (signUpModal.style.top = "-100%");
+
+window.onclick = (e) => {
+  if (e.target == signInModal) {
+    signInModal.style.top = "-100%";
+  }
+  if (e.target == signUpModal) {
+    signUpModal.style.top = "-100%";
+  }
+};
+
+showPassword.addEventListener("click", function (e) {
+  if (pass.type === "password") {
+    pass.type = "text";
+    e.currentTarget.children[0].style.display = "none";
+    e.currentTarget.children[1].style.display = "block";
+  } else {
+    pass.type = "password";
+    e.currentTarget.children[0].style.display = "block";
+    e.currentTarget.children[1].style.display = "none";
+  }
+});
