@@ -370,6 +370,7 @@ header nav .icons .search-box .form button svg {
   background-color: rgb(0 0 0 / 0.4);
   z-index: 100;
   transition: var(--main-transition);
+  overflow: auto;
 }
 
 .sign-in-content,
